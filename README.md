@@ -37,6 +37,21 @@
 
 ## 使用说明
 
+运行方法参考demo文件内容,主要借助runflow.py。
+
+```python
+from demo.runflow import magical_start,magical_request,magical_close
+
+project_name = 'cnipa'
+base_url = 'https://www.cnipa.gov.cn'
+
+session_id,process_url = magical_start(project_name,base_url)
+
+print(len(magical_request(session_id, process_url,'https://www.cnipa.gov.cn/col/col57/index.html')))
+
+magical_close(session_id,process_url,project_name)
+```
+
 index页可以查看和管理当前运行中的任务，也能查看系统内存和磁盘使用情况。
 
 demo文件夹中有任务流程汇总runflow.py，以及抖音、药监局案例，单任务和多任务示例。
