@@ -1,0 +1,59 @@
+body{
+    background: url(/static/image/bg.png);
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+}
+a{
+    text-decoration:none;
+}
+p{
+    font-size: 18px;
+    color: white;
+}
+img{
+    width: 207.99px;
+    height: 207.99px;
+}
+
+
+table{
+    border-collapse: collapse;
+    margin-left: 6%;
+    text-align: center;
+}
+table td, table th
+{
+    border: 1px solid #cad9ea;
+    color: #666;
+    height: 30px;
+}
+table thead th
+{
+    background-color: #CCE8EB;
+    width: 260px;
+}
+table tr:nth-child(odd)
+{
+    background: #fff;
+}
+table tr:nth-child(even)
+{
+    background: #F5FAFA;
+}
+
+.lx{
+    display: inline-block;
+    margin-left: 5%;
+}
+.bt{
+     font-weight:bold;
+     color:#5b91d6;
+}
+.blog{
+    border:solid;
+    border-color:#5784d0;
+    width: 10%;
+    margin-left: 65.6%;
+    position: fixed;
+    top: 0;
+}

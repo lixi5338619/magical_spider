@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>MagicalSpider</title>
+</head>
+<link rel="stylesheet" href="/static/css/index.css">
+
+<body>
+
+<div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+            <p>
+                【MagicalSpider】 神奇的蜘蛛🕷，一个几乎适用于所有web端站点的采集方案。(比如瑞数、加速乐、头条系、五秒盾等)
+            </p>
+        <br>
+            <p>
+                诞生背景：
+                    2022年全球变暖，各行业内卷严重，爬虫届更是入门抖音+瑞数，导致发生 [从入门到放弃] 。
+                    所以吾辈当自强，重铸selenium荣光 (本段纯属瞎扯) 。
+            </p>
+            <p>
+                项目说明：
+                    1、仅作学习，非常规driver.page_source。
+                    2、通过Flask实现chromederver的远程XMLHttpRequest。
+                    3、通过undetected_selenium+stealth绕过一些校验。
+            </p>
+            <p>
+                使用声明：
+                    1、本库源码和方案仅作为学习参考。
+                    2、百千万采集量勿需尝试。
+                    3、如有风控校验需自行解决，滑块参考middlerware.py。
+            </p>
+
+        <br>
+</div>
+
+
+<p>运行中的任务:</p>
+<div>
+        <table>
+            <thead>
+                <tr>
+                      <th>任务名</th>
+                      <th>任务ID</th>
+                      <th>任务地址</th>
+                      <th>创建时间</th>
+                      <th>任务管理</th>
+                    </tr>
+                {% for p in process %}
+                    <tr>
+                        <td>{{ p[1] }}</td>
+                        <td>{{ p[0] }}</td>
+                        <td>{{ p[2] }}</td>
+                        <td>{{ p[3][:19] }}</td>
+                        {% if p[0] %}
+                            <td><a href="/delete/{{ p[1] }}">删除任务</a></td>
+                        {% else %}
+                            <td></td>
+                        {% endif %}
+
+                    </tr>
+                {% endfor %}
+            </thead>
+        </table>
+</div>
+            <br>
+
+<div style="text-align: center;margin-top: 10%">
+    <div class="blog">
+        <a href="http://www.lxspider.com" target="_blank">
+            <p style="color: aqua;">个人博客：lxspider</p>
+        </a>
+    </div>
+
+    <div class="lx" style="margin-left: 0%">
+        <p class="bt">公众号《Pythonlx》</p>
+        <p>
+            <img src="http://www.lxspider.com/wp-content/uploads/2022/07/qrcode_for_gh_b237fabfe467_258.jpg" alt="">
+        </p>
+    </div>
+
+    <div class="lx">
+        <p class="bt">内存使用情况</p>
+        <p>总内存: {{ virtual_memory.total_format }}</p>
+        <p>可用内存: {{ virtual_memory.available_format }}</p>
+        <p>已使用内存: {{ virtual_memory.used_format }}</p>
+        <p>内存使用率: {{ virtual_memory.percent }}%</p>
+        <br>
+                <br>
+    </div>
+
+
+    <div class="lx">
+        <p class="bt">磁盘使用情况</p>
+        <p>总内存: {{ disk_usage.total_format }}</p>
+        <p>可用内存: {{ disk_usage.free_format }}</p>
+        <p>已使用内存: {{ disk_usage.used_format }}</p>
+        <p>内存使用率: {{ disk_usage.percent }}%</p>
+        <br>
+        <br>
+    </div>
+
+    <div class="lx">
+        <p class="bt">支付宝赞助</p>
+        <p>
+            <img src="http://8.142.98.244/wp-content/uploads/2022/07/%E6%97%A0%E6%A0%87%E9%A2%98.png" alt="">
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
