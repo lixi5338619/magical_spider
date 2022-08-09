@@ -9,6 +9,8 @@
 
 博客地址： [lxspider.com](http://www.lxspider.com)
 
+爬虫逆向工具站：[lxtools](http://www.cnlans.com/lx/tools)
+
 
 ### 项目简介
 - 非常规derver.pageSource。
