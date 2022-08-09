@@ -7,16 +7,17 @@
 
 真实原因：为了几条新闻，实在没必要逆向。吾辈当自强，重铸selenium荣光！
 
+
 ### 项目简介
 - 项目仅供学习参考，非 常规derver.pageSource。
 - 通过Flask远程调用chromederver实现xmlHttpRequest。
 - 通过undetected_selenium+stealth.min.js绕过一些校验。
 - 目前适用于瑞数、加速乐等cookie加密，以及头条系的请求过程加密。
 
+
 ### 项目声明
-- 本库源码和方案仅作为学习参考。
 - 百千万采集量勿需尝试。
-- 如有风控校验需自行解决。
+- 如有风控校验需自行解决，滑块可参考middlerware.py。
 
 
 
