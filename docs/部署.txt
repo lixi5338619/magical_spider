@@ -20,7 +20,7 @@ chmod 777 chromedriver
 
 7.安装python依赖后启动flask项目
 - Python依赖 ：flask、sqlite3、selenium、websockets、opencv-python、numpy
-- flask启动方式：python3 sever.py
+- flask启动方式：python3 server.py
 
 8.开启服务器端口访问权限
 
