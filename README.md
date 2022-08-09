@@ -11,13 +11,15 @@
 
 
 ### 项目简介
-- 项目仅供学习参考，非 常规derver.pageSource。
+- 非常规derver.pageSource。
 - 通过Flask远程调用chromederver实现xmlHttpRequest。
+- 通过sqlit记录任务状态。
 - 通过undetected_selenium+stealth.min.js绕过一些校验。
 - 目前适用于瑞数、加速乐等cookie加密，以及头条系的请求过程加密。
 
 
 ### 项目声明
+- 项目仅供学习参考。
 - 百千万采集量勿需尝试。
 - 如有风控校验需自行解决，滑块可参考middlerware.py。
 
