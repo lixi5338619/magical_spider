@@ -9,7 +9,7 @@ def magical_start(project_name,base_url = 'http://www.lxspider.com'):
     return session_id,process_url
 
 
-def magical_request(session_id,process_url,request_url,request_type='get',formdata=None):
+def magical_request(session_id,process_url,request_url,request_type='get',formdata=''):
     # 2、request browser_xhr
     data = {'session_id': session_id, 'process_url': process_url,
             'request_url': request_url, 'request_type': request_type}
