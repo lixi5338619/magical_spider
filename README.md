@@ -7,9 +7,7 @@
 
 真实原因：一时兴起，吾辈当自强，重铸selenium荣光！ 
 
-博客地址： [lxspider.com](http://www.lxspider.com)
-
-爬虫逆向工具站：[lxtools](http://www.cnlans.com/lx/tools)
+博客地址： [lxspider](http://www.lxspider.com)  爬虫逆向工具站：[lxtools](http://www.cnlans.com/lx/tools)
 
 
 ### 项目简介
@@ -22,9 +20,8 @@
 
 ### 项目声明
 - 项目仅供学习参考。
-- 百千万采集量勿需尝试。
 - 如有风控校验需自行解决，滑块可参考middlerware.py。
-
+- 方案适用于应急场景或数据量要求不高时，若时间充裕建议通过逆向处理。推荐阅读：[《爬虫逆向进阶实战》](https://github.com/lixi5338619/lxBook)
 
 
 
@@ -37,7 +34,11 @@
 
 ## 使用说明
 
-运行方法参考demo文件内容,主要借助runflow.py。
+1、配置settings.py，启动 flask 服务
+
+2、运行方法参考demo文件内容,主要借助runflow.py。
+
+3、测试代码
 
 ```python
 from demo.runflow import magical_start,magical_request,magical_close
@@ -52,9 +53,9 @@ print(len(magical_request(session_id, process_url,'https://www.cnipa.gov.cn/col/
 magical_close(session_id,process_url,project_name)
 ```
 
-index页可以查看和管理当前运行中的任务，也能查看系统内存和磁盘使用情况。
+4、index页可以查看和管理当前运行中的任务，也能查看系统内存和磁盘使用情况。
 
-demo文件夹中有任务流程汇总runflow.py，以及抖音、药监局案例，单任务和多任务示例。
+5、demo文件夹中有任务流程汇总runflow.py，以及抖音、药监局案例，单任务和多任务示例。
 
 
 
