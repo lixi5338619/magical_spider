@@ -22,6 +22,11 @@ chmod 777 chromedriver
 - Python依赖 ：flask、sqlite3、selenium、websockets、opencv-python、numpy
 - flask启动方式：python3 server.py
 
+
 8.开启服务器端口访问权限
 
 9.运行项目测试
+
+
+
+我本地环境，这个不关键 （Python3.7.8,flask==2.1.1,websockets==10.1,selenium== 4.1.3,numpy==1.21.6,opencv-python==4.5.5.64）
