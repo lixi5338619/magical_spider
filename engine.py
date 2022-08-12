@@ -39,10 +39,10 @@ def carry_browser(session_id,process_url,request_url,request_type,formdata):
 
 
 def close_browser(session_id,process_url,process_name):
+    delete_process(process_name)
     browser = attachToSession(session_id,process_url)
     browser.close()
     browser.quit()
-    delete_process(process_name)
 
 
 def select_all_process():
