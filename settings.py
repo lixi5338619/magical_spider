@@ -19,6 +19,7 @@ magicalpath = './config/magical.db'
 stealth_path = './config/stealth.min.js'
 
 host = '0.0.0.0'
+
 port = 5000
 
 # 让 Selenium 在 Linux 中以有头模式运行

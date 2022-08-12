@@ -113,14 +113,15 @@ class BrowserApi():
                                     "method":"POST",
                                     "data" : '%s'
                                   };
-                           var h = new XMLHttpRequest;h.open(e.method, e.url, true);
+                           var h = new XMLHttpRequest;
+                           h.open(e.method, e.url, true);
                            h.setRequestHeader("accept","application/json, text/plain, */*");  
                            h.setRequestHeader("content-type","application/json;charset=UTF-8");
                            h.setRequestHeader("salute-by","lx");
                            h.onreadystatechange =function() {
                                 if(h.readyState != 4) return;
                                 if(h.readyState === 4 && h.status  ===200) {
-                                   resolve(h.responseURL);
+                                   resolve(h.responseText);
                                 } else {
                                  }
                            };
@@ -167,3 +168,5 @@ class BrowserApi():
                 time.sleep(1)
             except:
                 break
+
+

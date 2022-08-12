@@ -48,4 +48,3 @@ def close_browser(session_id,process_url,process_name):
 def select_all_process():
     return select_process()
 
-print(select_process_name("药监局1"))

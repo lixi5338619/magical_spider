@@ -3,9 +3,12 @@
 
 
 ### 诞生背景
-纯属瞎扯：2022年全球变暖，各行业内卷严重，爬虫届更是入门抖音起步瑞数，所以为了减缓人才流失，推出magical_spider。
+纯属瞎扯：2022年全球变暖，各行业内卷严重，爬虫届更是入门抖音起步瑞数，为了减缓人才流失，推出magical_spider。
 
-真实原因：为了几条新闻，实在没必要逆向。吾辈当自强，重铸selenium荣光！
+真实原因：一时兴起，吾辈当自强，重铸selenium荣光！ 
+
+博客地址： [lxspider.com](http://www.lxspider.com)
+
 
 ### 项目简介
 - 项目仅供学习参考，非 常规derver.pageSource。
@@ -13,17 +16,25 @@
 - 通过undetected_selenium+stealth.min.js绕过一些校验。
 - 目前适用于瑞数、加速乐等cookie加密，以及头条系的请求过程加密。
 
+
 ### 项目声明
-- 本库源码和方案仅作为学习参考。
 - 百千万采集量勿需尝试。
-- 如有风控校验需自行解决。
+- 如有风控校验需自行解决，滑块可参考middlerware.py。
 
 
 
 
 ### 部署
-[linux部署文档](./docs/部署.txt)
+[linux部署文档](static/docs/部署.txt)
 
 ---
+
+## 使用说明
+
+index页可以查看和管理当前运行中的任务，也能查看系统内存和磁盘使用情况。
+
+demo文件夹中有任务流程汇总runflow.py，以及抖音、药监局案例，单任务和多任务示例。
+
+
 
 ![Alt](./static/image/index.png)
