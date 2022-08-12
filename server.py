@@ -33,7 +33,7 @@ def browser_start():
                   'process_url': process_url, 'datetime': datetime}
         return jsonify(result)
     except:
-        return jsonify({"result":0})
+        return jsonify({"result":0,"detail":"驱动配置错误或任务名已存在"})
 
 
 @app.route('/xhr',methods=['POST'])
@@ -56,7 +56,7 @@ def browser_close():
         close_browser(session_id,process_url,process_name)
         return jsonify({"result":1})
     except:
-        return jsonify({"result":0})
+        return jsonify({"result":0,"detail":"驱动窗口已自动关闭"})
 
 
 @app.route('/delete/<process_name>',methods=['GET'])
