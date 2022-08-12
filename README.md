@@ -54,4 +54,5 @@ magical_close(session_id,process_url,project_name)
 4、index页可以查看和管理当前运行中的任务，也能查看系统内存和磁盘使用情况。
 
 5、demo文件夹中有任务流程汇总runflow.py，以及抖音、药监局案例，单任务和多任务示例。
-![Alt](./static/image/index.png)
+
+![Alt](./static/image/index2.png)
