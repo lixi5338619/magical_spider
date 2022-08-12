@@ -28,7 +28,7 @@ def browser_start():
     name = request.form.get("name")
     try:
         create_browser(url,name)
-        session_id, process_name, process_url, datetime = select_process_name(name)
+        session_id, process_name, process_url, datetime,base_url = select_process_name(name)
         result = {'session_id': session_id, 'process_name': process_name,
                   'process_url': process_url, 'datetime': datetime}
         return jsonify(result)
@@ -71,4 +71,4 @@ def delete_process_name(process_name):
 
 
 if __name__ == '__main__':
-    app.run(host=host,port=port,use_reloader=False,debug=False)
+    app.run(host=host,port=port,use_reloader=False,debug=True)

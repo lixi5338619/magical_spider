@@ -39,6 +39,9 @@ class Browser():
         if incognito_enable:
             options.add_argument("--incognito")
 
+        if detach_enable:
+            options.add_experimental_option("detach",True)
+
         if platform.system().lower()=='linux':
             options.add_argument("--headless")
             options.add_argument('--no-sandbox')

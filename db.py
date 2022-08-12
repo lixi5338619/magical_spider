@@ -28,6 +28,14 @@ def select_process_name(processName:str)->Process:
     db.close()
     return res
 
+def select_process_id(processId:str)->Process:
+    db = create_connection()
+    con = db.cursor()
+    con.execute("select * from process where processId=?",(processId,))
+    res = con.fetchone()
+    con.close()
+    db.close()
+    return res
 
 def insert_process(process:Process)->Process:
     db = create_connection()
@@ -54,7 +62,19 @@ def delete_process(process_name):
         cursor.close()
         db.close()
     except Exception as e:
-        print(e)
+        db.rollback()
+        cursor.close()
+        db.close()
+
+def delete_process_id(processId):
+    db = create_connection()
+    cursor = db.cursor()
+    try:
+        cursor.execute("delete FROM process where processId ='%s'" % (processId))
+        db.commit()
+        cursor.close()
+        db.close()
+    except Exception as e:
         db.rollback()
         cursor.close()
         db.close()
@@ -65,5 +85,5 @@ if __name__ == '__main__':
     if not os.path.exists(magicalpath):
         con = sqlite3.connect(magicalpath)
         cursor = con.cursor()
-        cursor.execute("CREATE TABLE IF NOT EXISTS `process`(`processId` VARCHAR(90),`processName` VARCHAR(90) UNIQUE,`processUrl` VARCHAR(256),`createTime` DATA);")
+        cursor.execute("CREATE TABLE IF NOT EXISTS `process`(`processId` VARCHAR(90),`processName` VARCHAR(90) UNIQUE,`processUrl` VARCHAR(256),`createTime` DATA,`baseUrl` VARCHAR(256));")
         con.commit()

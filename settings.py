@@ -1,16 +1,24 @@
 # MagicalSpider Settings
 
+# 隐藏界面
 headless_enable = True
 
-stealth_enable = True
+# 高匿模式、可能影响创建时间
+stealth_enable = False
 
+# 代理设置
 proxy = None
+
+# 无痕访问
+incognito_enable = False
+
+# 分离模式
+detach_enable = False
 
 plugin_enable = False
 
 logging_enable = False
 
-incognito_enable = False
 
 driverpath = './config/chromedriver.exe'
 
