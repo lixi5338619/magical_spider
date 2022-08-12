@@ -38,6 +38,7 @@
 
 3、测试代码
 
+GET请求
 ```python
 from demo.runflow import magical_start,magical_request,magical_close
 
@@ -51,8 +52,29 @@ print(len(magical_request(session_id, process_url,'https://www.cnipa.gov.cn/col/
 magical_close(session_id,process_url,project_name)
 ```
 
+POST请求
+```python
+from demo.runflow import magical_start,magical_request,magical_close
+import json
+
+project_name = 'chinadrugtrials'
+base_url = 'http://www.chinadrugtrials.org.cn'
+
+session_id,process_url = magical_start(project_name,base_url)
+
+data = {"id": "","ckm_index": "","sort": "desc","sort2": "","rule": "CTR","secondLevel": "0","currentpage": "2","keywords": "","reg_no": "","indication": "","case_no": "","drugs_name": "","drugs_type": "","appliers": "","communities": "","researchers": "","agencies": "","state": ""}
+formdata = json.dumps(data)
+
+print(magical_request(session_id=session_id, process_url=process_url,
+                      request_url='http://www.chinadrugtrials.org.cn/clinicaltrials.searchlist.dhtml',
+                      request_type='post',formdata=formdata
+                      ))
+
+magical_close(session_id,process_url,project_name)
+```
+
 4、index页可以查看和管理当前运行中的任务，也能查看系统内存和磁盘使用情况。
 
 5、demo文件夹中有任务流程汇总runflow.py，以及抖音、药监局案例，单任务和多任务示例。
 
-![Alt](./static/image/index2.png)
+![Alt](./static/image/index.png)
