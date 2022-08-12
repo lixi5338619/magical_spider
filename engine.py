@@ -47,4 +47,8 @@ def close_browser(session_id,process_url,process_name):
 
 def select_all_process():
     return select_process()
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> b18b67a76d07979298f7a343ec5602532ccab217
