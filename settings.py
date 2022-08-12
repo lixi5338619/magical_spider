@@ -4,7 +4,7 @@
 headless_enable = True
 
 # 高匿模式、可能影响创建时间
-stealth_enable = False
+stealth_enable = True
 
 # 代理设置
 proxy = None
