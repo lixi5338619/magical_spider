@@ -77,4 +77,4 @@ magical_close(session_id,process_url,project_name)
 
 5、demo文件夹中有任务流程汇总runflow.py，以及抖音、药监局案例，单任务和多任务示例。
 
-![Alt](./static/image/index.png)
+![Alt](./static/image/index2.png)
